@@ -19,6 +19,15 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 Please make sure to update tests as appropriate.
 
+## Technologies
+React 
+Reach-router
+React-icons
+graphql
+styled-components
+Vercel for deployment
+webpack
+
 ## Authors
 [Diego Alejandro](https://github.com/alejandro2706)
 
