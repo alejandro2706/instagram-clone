@@ -3,12 +3,12 @@ import { ListOfCategories } from './components/ListOfCategories'
 import { GlobalStyle } from './styles/GlobalStyles'
 import { ListOfPhotoCards } from './components/ListOfPhotoCards'
 import { Navbar } from './components/Navbar'
+import { PhotoCardWithQuery } from './containers/PhotoCardWithQuery'
 
 function App () {
   // URLSearchParams recibe la query string de la barra de direcciones
   const urlParams = new window.URLSearchParams(window.location.search)
   const detailId = urlParams.get('detail')
-  console.log(detailId)
 
   return (
     <>
@@ -16,7 +16,7 @@ function App () {
       <Navbar />
       {
         detailId
-          ? <h1>Detail id</h1>
+          ? <PhotoCardWithQuery id={detailId} />
           : (
             <>
               <ListOfCategories />

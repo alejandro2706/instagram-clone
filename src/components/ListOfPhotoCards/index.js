@@ -23,14 +23,14 @@ export const ListOfPhotoCards = ({ categoryId }) => {
     variables: { categoryId: categoryId }
   })
 
-  if (loading) return <SkeletonLoader />
   if (error) return <h1>error</h1>
 
   return (
     <ul>
-      {data.photos.map(photo => (
-        <PhotoCard key={photo.id} id={photo.id} {...photo} />
-      ))}
+      {loading ? [1, 2, 3, 4].map((i) => <SkeletonLoader key={i} />)
+        : data.photos.map(photo => (
+          <PhotoCard key={photo.id} id={photo.id} {...photo} />
+        ))}
     </ul>
   )
 }
