@@ -3,7 +3,8 @@ const webpack = require('webpack')
 
 module.exports = {
   output: {
-    filename: 'app.bundle.js'
+    filename: 'app.bundle.js',
+    publicPath: '/'
   },
   devtool: 'inline-source-map',
   module: {
