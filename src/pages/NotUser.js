@@ -17,19 +17,26 @@ const LOGIN = gql`
 `
 
 export const NotUser = () => {
-  const [register, { dataRegister, loadingRegister, errorRegister }] = useMutation(REGISTER)
-  const [login, { dataLogin, loadingLogin, errorLogin }] = useMutation(LOGIN)
+  const [register, { loadingRegister, errorRegister }] = useMutation(REGISTER)
+  const [login, { loadingLogin, errorLogin }] = useMutation(LOGIN)
   const { activateAuth } = useContext(UserContext)
 
   const onSubmitRegister = ({ email, password }) => {
     //  input porque es el nombre del Obj que recibe la mutación
     const input = { email, password }
     register({ variables: { input } })
-      .then(activateAuth)
+      .then(({ data }) => {
+        const { signup } = data
+        activateAuth(signup)
+      })
   }
   const onSubmitLogin = ({ email, password }) => {
     const input = { email, password }
     login({ variables: { input } })
+      .then(({ data }) => {
+        const { login } = data
+        activateAuth(login)
+      })
   }
 
   return (

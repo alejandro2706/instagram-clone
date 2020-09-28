@@ -2,12 +2,13 @@ import React, { useState } from 'react'
 import { UserContext } from '../Context'
 
 function UserProvider ({ children }) {
-  const [isAuth, setIsAuth] = useState(false)
+  const [isAuth, setIsAuth] = useState(() => window.sessionStorage.getItem('token'))
 
   const value = {
     isAuth,
-    activateAuth: () => {
+    activateAuth: (token) => {
       setIsAuth(true)
+      window.sessionStorage.setItem('token', token)
     }
   }
 
