@@ -1,7 +1,13 @@
 import React from 'react'
+import { GetFavorites } from '../containers/GetFavorites'
+import { Layout } from '../components/layout'
 
-export const Favs = () => {
+const Favs = () => {
   return (
-    <h1>Fav</h1>
+    <Layout title='Tus favoritos' subtitle='Aquí puedes encontrar tus favoritos'>
+      <GetFavorites />
+    </Layout>
   )
 }
+
+export default Favs

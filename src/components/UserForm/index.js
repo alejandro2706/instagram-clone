@@ -1,6 +1,7 @@
 import React from 'react'
 import { useInputValue } from '../../hooks/useInputValue'
-import { Form, Input, Button, Title, Error } from './styles'
+import { Form, Input, Title, Error } from './styles'
+import { SubmitButton as Button } from '../SubmitButton'
 import { Spinner } from '../Spinner'
 
 export const UserForm = ({ onSubmit, title, error, loading }) => {

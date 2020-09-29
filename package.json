@@ -5,6 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode production",
+    "build:perf": "webpack --mode development",
     "lint": "standard",
     "start": "webpack-dev-server --history-api-fallback"
   },
@@ -43,6 +44,7 @@
     "react-apollo": "^3.1.5",
     "react-content-loader": "^5.1.1",
     "react-dom": "^16.13.1",
+    "react-helmet": "^6.1.0",
     "react-icons": "^3.11.0",
     "react-top-loading-bar": "^2.0.1",
     "styled-components": "^5.2.0"
