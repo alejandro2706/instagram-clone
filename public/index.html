@@ -6,6 +6,20 @@
   <title>PetGram</title>
 </head>
 <body>
+  <noscript>Necesitas habilitar Javascript para usar esta App</noscript>
   <div id="app"></div>
+  <script>
+    if('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js')
+          .then(registration => {
+            console.log('Register successfully')
+          })
+          .catch(error => {
+            console.log('Register unsuccessfully')
+          })
+      })
+    }
+  </script>
 </body>
 </html>
