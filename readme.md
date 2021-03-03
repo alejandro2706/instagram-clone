@@ -24,13 +24,13 @@ npm run dev
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 ## Technologies
-React 
-Reach-router
-React-icons
-graphql
-styled-components
-Vercel for deployment
-webpack
+- React 
+- Reach-router
+- React-icons
+- graphql
+- styled-components
+- Vercel for deployment
+- webpack
 
 ## Authors
 [Diego Alejandro](https://github.com/alejandro2706)
